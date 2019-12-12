@@ -30,7 +30,9 @@ def pop() -> Any:
 	if not stack:
 		return None
 	else:
-		return stack[-1]
+		n = stack[-1]
+		del stack[-1]
+		return n
 
 
 def peek(ind: int = 0) -> Any:
@@ -40,10 +42,13 @@ def peek(ind: int = 0) -> Any:
 	:param ind: index of element (count from the top, 0 - top, 1 - first from top, etc.)
 	:return: peeked element or None if no element in this place
 	"""
-	print(ind)
+	print("Index:", ind)
 
-	# global stack
-	return None
+	global stack
+	if not stack:
+		return None
+	else:
+		return stack[ind]
 
 
 def clear() -> None:
@@ -56,7 +61,9 @@ def clear() -> None:
     return None
 
 if __name__ == "__main__":
-	# push(1)
-	# push(2)
+	push(1)
+	push(2)
+	push(3)
 	print(stack)
 	print(pop())
+	print(peek(1))
