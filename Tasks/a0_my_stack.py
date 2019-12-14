@@ -48,7 +48,11 @@ def peek(ind: int = 0) -> Any:
 	if not stack:
 		return None
 	else:
-		return stack[ind]
+		if ind > len(stack):
+			return None
+		else:
+			n = len(stack) - ind
+			return stack[n-1]
 
 
 def clear() -> None:
@@ -66,4 +70,9 @@ if __name__ == "__main__":
 	push(3)
 	print(stack)
 	print(pop())
-	print(peek(1))
+	print(stack)
+	print(peek())
+	push(4)
+	push(8)
+	print(stack)
+	print(peek(5))
