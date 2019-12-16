@@ -76,3 +76,4 @@ if __name__ == "__main__":
 	push(8)
 	print(stack)
 	print(peek(5))
+	print("Control")
