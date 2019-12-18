@@ -6,4 +6,12 @@ def check_brackets(brackets_row: str) -> bool:
 	:return: True if valid, False otherwise
 	"""
 
-	return False
+	open_skobka = brackets_row.count("(")
+	close_skobka = brackets_row.count(")")
+	if open_skobka == close_skobka:
+		return True
+	else:
+		return False
+
+if __name__ == "__main__":
+	print(check_brackets(""))
