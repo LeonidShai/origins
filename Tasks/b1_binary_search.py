@@ -12,6 +12,7 @@ def binary_search(elem: Any, arr: Sequence) -> Optional[int]:
 	print(elem, arr)
 	return None
 
+
 def bn_search_elem(find_elem, array):
 	right = len(array)
 	left = 0
@@ -34,7 +35,7 @@ def bn_search_elem(find_elem, array):
 
 if __name__ == "__main__":
 	array = [i for i in range(1, 11)]
-	find_elem = 5 #random.choice(array)
+	find_elem = 4 #random.choice(array)
 	print(f"find_elem {find_elem}")
 	print(array)
 	print("index:", bn_search_elem(find_elem, array))

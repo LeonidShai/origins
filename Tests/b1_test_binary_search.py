@@ -20,7 +20,7 @@ class MyTestCase(unittest.TestCase):
 	def test_borders(self):
 		self.assertEqual(0, binary_search(0, self.arr),
 						 msg="First element is not found - maybe 'mid - 1' is missing?")
-		self.assertEqual(101, binary_search(101, self.arr),
+		self.assertEqual(100, binary_search(101, self.arr),
 						 msg="Last element is not found - maybe 'mid + 1' is missing?")
 
 
