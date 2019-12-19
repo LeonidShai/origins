@@ -32,7 +32,6 @@ def bn_search_elem(find_elem, array):
 				middle = (right + left)//2
 
 
-
 if __name__ == "__main__":
 	array = [i for i in range(1, 11)]
 	find_elem = 4 #random.choice(array)
