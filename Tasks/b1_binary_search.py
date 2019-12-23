@@ -23,4 +23,12 @@ def binary_search(elem: Any, arr: Sequence) -> Optional[int]:
 
 
 if __name__ == "__main__":
+<<<<<<< Updated upstream
 	print(binary_search(3, [1, 6, 2, 3, 5, 9]))
+=======
+	array = [i for i in range(1, 11)]
+	find_elem = 11 #random.choice(array)
+	print(f"find_elem {find_elem}")
+	print(array)
+	print("index:", bn_search_elem(find_elem, array))
+>>>>>>> Stashed changes
