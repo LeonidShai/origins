@@ -9,12 +9,18 @@ def binary_search(elem: Any, arr: Sequence) -> Optional[int]:
 	:param arr: array where element is to be found
 	:return: Index of element if it's presented in the arr, None otherwise
 	"""
-	arr = list(arr)
-	arr.sort()
 
-	print(elem, arr)
+	right = len(arr)
+	left = 0
+	while True:
+		middle = (right + left) // 2
+		if elem == arr[middle]:
+			return middle
+		elif arr[middle] > elem:
+			right = middle - 1
+		else:
+			left = middle + 1
 
-	return None
 
 if __name__ == "__main__":
 	print(binary_search(3, [1, 6, 2, 3, 5, 9]))
