@@ -48,20 +48,26 @@ def peek(ind: int = 0, priority: int = 0) -> Any:
 	:return: peeked element
 	"""
 	global que_pr
-	l = []
-	for key in que_pr.keys():
-		l.append(key)
-	l.sort()
-
-	a = []
-	for i in l:
-		for j in que_pr[i]:
-			a.append(j)
-
-	if ind >= len(a):
+	# l = []
+	# for key in que_pr.keys():
+	# 	l.append(key)
+	# l.sort()
+	#
+	# a = []
+	# for i in l:
+	# 	for j in que_pr[i]:
+	# 		a.append(j)
+	#
+	# if ind >= len(a):
+	# 	return None
+	# else:
+	# 	return a[ind]
+	if priority not in que_pr:
+		return None
+	elif len(que_pr[priority]) <= ind:
 		return None
 	else:
-		return a[ind]
+		return que_pr[priority][ind]
 
 
 def clear() -> None:
