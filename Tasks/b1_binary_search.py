@@ -10,6 +10,9 @@ def binary_search(elem: Any, arr: Sequence) -> Optional[int]:
 	:return: Index of element if it's presented in the arr, None otherwise
 	"""
 
+	if elem not in arr:
+		return None
+
 	right = len(arr)
 	left = 0
 	while True:
