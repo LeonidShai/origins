@@ -5,7 +5,7 @@ from typing import Union
 import math
 
 
-def ex(x: Union[int, float], delta = 0.0001) -> float:
+def ex(x: Union[int, float], delta=0.0001) -> float:
 	"""
 	Calculate value of e^x with Taylor series
 
@@ -27,12 +27,19 @@ def ex(x: Union[int, float], delta = 0.0001) -> float:
 				n += 1
 
 
-def sinx(x: Union[int, float]) -> float:
+def sinx(x: Union[int, float], delta=0.0001) -> float:
 	"""
 	Calculate sin(x) with Taylor series
 
 	:param x: x value
 	:return: sin(x) value
 	"""
-	print(x)
-	return 0
+	result_sum = 0
+	n = 0
+	while True:
+		result = (((-1) ** n) * (x ** (2 * n + 1))) / (math.factorial(2 * n + 1))
+		result_sum += result
+		if abs(result) < delta:
+			return result_sum
+		else:
+			n += 1
