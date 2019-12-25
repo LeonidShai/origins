@@ -6,7 +6,14 @@ def fib_recursive(n: int) -> int:
 	:return: Fibonacci number
 	"""
 	print(n)
-	return 0
+	if n < 0:
+		raise ValueError
+	elif n == 0:
+		return 0
+	elif n == 1:
+		return 1
+	else:
+		return fib_recursive(n - 1) + fib_recursive(n - 2)
 
 
 def fib_iterative(n: int) -> int:
@@ -17,4 +24,10 @@ def fib_iterative(n: int) -> int:
 	:return: Fibonacci number
 	"""
 	print(n)
+	if n < 0:
+		raise ValueError
 	return 0
+
+if __name__ == "__main__":
+	print(fib_recursive(3))
+	#print(fib_iterative(2))
