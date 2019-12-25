@@ -20,5 +20,12 @@ def factorial_iterative(n: int) -> int:
 	:param n: int > 0
 	:return: factorial of n
 	"""
-	print(n)
-	return 0
+	if n < 0:
+		raise ValueError
+	elif n == 0:
+		return 1
+	else:
+		p = 1
+		for i in range(1, n + 1):
+			p *= i
+		return p
