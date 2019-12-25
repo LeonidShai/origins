@@ -12,4 +12,13 @@ def min_search(arr: Sequence) -> int:
 	:return: index of first occurrence of minimal element in array
 	"""
 	print(arr)
-	return -1
+	min_index = None
+	min_elem = arr[0]
+	for i in range(1, len(arr)):
+		if min_elem > arr[i]:
+			min_elem = arr[i]
+			min_index = i
+	return min_index
+
+if __name__ == "__main__":
+	print(min_search([4, 1, 9, 1, 9, 3]))
