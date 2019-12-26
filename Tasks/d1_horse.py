@@ -29,12 +29,12 @@ def calculate_paths(shape: (int, int), point: (int, int)) -> int:
 					F[i + 2, j - 1] += F[i, j] * 2
 
 
-	# print(F)
-	# print(shape, point)
+	print(F)
+	print(shape, point)
 	return F[point]
 
 if __name__ == "__main__":
 	N = 4
 	M = 4
-	point = (4, 4)
+	point = (3, 3)
 	print(calculate_paths((N, M), point))
