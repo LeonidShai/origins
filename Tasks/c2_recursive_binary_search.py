@@ -17,7 +17,6 @@ def binary_search(elem: Any, arr: Sequence, left = 0, right = None) -> Optional[
 		return None
 
 	middle = (right + left) // 2
-	#print(f"middle: {arr[middle]}")
 	if elem == arr[middle]:
 		return middle
 	elif elem > arr[middle]:
