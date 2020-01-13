@@ -14,9 +14,15 @@ def sort(container: Collection[_Tt]) -> Collection[_Tt]:
 		return container
 	else:
 		middle = len(container) // 2
+		print("====")
+		print("common split")
+		print("left container", container[:middle])
+		print("right container", container[middle:])
+		print("split left container")
 		left_container = sort(container[:middle])
+		print("split right container")
 		right_container = sort(container[middle:])
-
+	print("merge", left_container, right_container)
 	return merge(left_container, right_container)
 
 def merge(left_container, right_container):
@@ -42,6 +48,7 @@ def merge(left_container, right_container):
 			sorted_.append(left_container[left_container_index])
 			left_container_index += 1
 
+	print("merged", sorted_)
 	return sorted_
 
 
