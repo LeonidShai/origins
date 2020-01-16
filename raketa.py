@@ -10,7 +10,7 @@ def plot(graph):
 
     nx.draw_networkx_nodes(graph, pos)
     nx.draw_networkx_edges(graph, pos)
-    nx.draw_networkx_labels(graph, pos, labels)
+    nx.draw_networkx_labels(graph, pos, labels, font_size=16)
 
     #plt.show()
     print(graph.degree)
