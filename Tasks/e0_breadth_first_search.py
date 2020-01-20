@@ -29,6 +29,7 @@ def bfs_find(graph, src, dst):
 				if not visited[node]:
 					deque_nodes.appendleft(node)
 					parents[node] = parents[src] + node
+					print(parents)
 				if node == dst:
 					return parents[node]
 
@@ -41,16 +42,19 @@ if __name__ == "__main__":
 	graph.add_nodes_from("ABCDEFG")  # узлы графа
 	graph.add_edges_from(
 		[
-			("A", "B"),
-			("A", "C"),
-			("B", "D"),
-			("B", "E"),
-			("C", "F"),
-			("E", "G")
+			('A', 'B'),
+			('A', 'C'),
+			('B', 'D'),
+			('D', 'K'),
+			('D', 'H'),
+			('H', 'L'),
+			('C', 'E'),
+			('E', 'G'),
+			('E', 'F')
 		]
 	)  # рёбра графа
 
-	src = "B"
+	src = "K"
 	dst = "F"
 
 	print(bfs_find(graph, src, dst))
